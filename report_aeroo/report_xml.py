@@ -384,9 +384,9 @@ class report_xml(osv.osv):
                 doc = etree.XML(res['arch'])
                 deferred_node = doc.xpath("//field[@name='deferred']")
                 modifiers = {'invisible': True}
-                transfer_modifiers_to_node(modifiers, deferred_node[0])
+                deferred_node and transfer_modifiers_to_node(modifiers, deferred_node[0])
                 deferred_limit_node = doc.xpath("//field[@name='deferred_limit']")
-                transfer_modifiers_to_node(modifiers, deferred_limit_node[0])
+                deferred_limit_node and transfer_modifiers_to_node(modifiers, deferred_limit_node[0])
                 res['arch'] = etree.tostring(doc)
             ############################################
         return res
