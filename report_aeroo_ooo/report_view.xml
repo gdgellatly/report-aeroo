@@ -22,7 +22,7 @@
       <field name="name">Configure OpenOffice.org connection</field>
       <field name="type">ir.actions.act_window</field>
       <field name="res_model">aeroo_config.installer</field>
-      <field name="view_id" ref="view_aeroo_config_installer"/>
+      <field name="view_id" ref="report_aeroo_ooo.view_aeroo_config_installer"/>
       <field name="view_type">form</field>
       <field name="view_mode">form</field>
       <field name="target">new</field>
