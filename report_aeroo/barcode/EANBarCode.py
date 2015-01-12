@@ -2,7 +2,7 @@
 #                    General contacts <info@alistek.com>
 
 from tools import config, ustr
-fontsize = 15
+fontsize = 10
 
 """
 This class generate EAN bar code, it required PIL (python imaging library)
@@ -127,7 +127,7 @@ class EanBarCode:
           font_file = mod_path+os.path.sep+ \
                       "report_aeroo"+os.path.sep+"barcode"+os.path.sep+"FreeMonoBold.ttf"
           if os.path.lexists(font_file):
-              font = ImageFont.truetype(font_file, 10) #edit: was fontsize variable.
+              font = ImageFont.truetype(font_file, fontsize)
       
       # Create drawer
       draw = ImageDraw.Draw(im)
