@@ -127,7 +127,7 @@ class EanBarCode:
           font_file = mod_path+os.path.sep+ \
                       "report_aeroo"+os.path.sep+"barcode"+os.path.sep+"FreeMonoBold.ttf"
           if os.path.lexists(font_file):
-              font = ImageFont.truetype(font_file, fontsize)
+              font = ImageFont.truetype(font_file, 10) #edit: was fontsize variable.
       
       # Create drawer
       draw = ImageDraw.Draw(im)
