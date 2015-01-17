@@ -156,6 +156,7 @@ class ExtraFunctions(object):
                 self._text_plain('"wikimarkup" format is not supported! Need to be installed "python-mediawiki" package.'),
             'text_markup': self._text_markup,
             '__filter': self.__filter, # Don't use in the report template!
+            'floattime': self._floattime,
         }
 
     def __filter(self, val):
@@ -586,4 +587,9 @@ class ExtraFunctions(object):
         elif first_line=='text/x-rst':
             return self._text_rest('\n'.join(lines))
         return text
+
+    def _floattime(self, field):
+        hour = int(field)
+        minute = int((field - hour) * 60)
+        return '%02d:%02d' % (hour, minute)
 
